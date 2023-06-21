@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUCKET LIST</title>
+    <link rel="stylesheet" href="resource/css/common.css">
+    <link rel="stylesheet" href="resource/css/board.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+    <header>
+        <div class="hd center12">
+            <h1><a href="index.html"><img src="resource/img/logo.png" alt=""></a></h1>
+            <ul class="rightMenu">
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="join.html">JOIN</a></li>
+
+                <!-- 로그인했을 때 로그인, 회원가입 사라지고 노출되는 버튼 -->
+                <!-- <li><a href="">LOGOUT</a></li> -->
+                <!-- <li><a href="">MYPAGE</a></li> -->
+
+                <!-- 로그인 안한 상태에서 누르면 로그인 안내멘트 뜨고 로그인 페이지로 이동 -->
+                <li><a href="myBooking.html">MY BOOKING</a></li>
+
+                <!-- 호스트 아이디로 로그인했을 때 노출되는 버튼 -->
+                <!-- <li><a href="host.html" class="plusBtn">HOST PAGE</a></li> -->
+    
+                <!-- 관리자 아이디로 로그인했을 때 노출되는 버튼 -->
+                <!-- <li><a href="admin.html" class="plusBtn">ADMIN PAGE</a></li> -->
+
+                <li><a href="reservation.html" class="reserBtn">RESERVATION</a></li>
+            </ul>
+
+        </div>
+    </header>
+    <div class="fkHeader"></div>
+    <a href="" class="menuBtn">
+        <span class="up"></span>
+        <span class="center"></span>
+        <span class="down"></span>
+    </a>
+    <div class="menuWrap">
+        <ul>
+            <li><a href="notice.html">NOTICE</a></li>
+            <li><a href="qna.html">QNA</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="like.html">LIKE</a></li>
+            <li><a href="msg.html">MESSAGE</a></li>
+            <li><a href="hostEn.html">HOST</a></li>
+        </ul>
+    </div>
+
+    <div class="boardList center12">
+        <h2 class="subTit"><strong>문의사항</strong>을 남겨주시면 <br>빠른 답변을 드리겠습니다.</h2>
+        
+        <div class="board_view">
+			<table>
+				<tr>
+					<th>문의사항 제목을 입력해주세요</th>
+				</tr>
+				<tr>
+					<td class="firstTd">
+						<div class="flex">
+							<p class="pTop">작성자<span>홍길동</span></p>
+							<p class="pTop">작성일<span>2023-06-20</span></p>
+						</div>
+					</td>
+				</tr>
+				<tr class="tr_bd">
+					<td class="td_mg">
+						<p class="pTop">
+							첨부파일
+                            <!-- <span class='file'>등록된 파일이 없습니다</span> -->
+                            <span class="file"><a href="">첨부파일.png</a></span>
+						</p>
+					</td>
+				</tr>
+				<tr class="tr_bd">
+					<td class="td_mg2">
+						<pre class="view_txt">내용</pre>
+                        <!-- 첨부파일 이미지 일 때 이미지 노출 -->
+						<p class="view_img"><img src="resource/img/room01.jpg"></p>
+						<p class="view_info">조회수 <span class="">222</span></p>
+					</td>
+				</tr>
+			</table>
+
+            <div class="reply">
+                <div class="replyWrite">
+                    <p>관리자</p>
+                    <td><textarea rows="3" cols="50" id="replyContent" placeholder="댓글을 입력해주세요.(500byte)"></textarea></td>
+                    <td><button onclick="">댓글등록</button></td>
+                </div>
+                
+                <table>
+                    <tbody id="tbody">
+                        <tr>
+                            <td class='td_width1'>관리자</td>
+                            <td>답변내용ㅇㅇㅇㅇㅇㅇㅇ</td>
+                            <td class='td_width2'>2023-06-20</td>
+                        </tr>   
+                        <tr>
+                            <td class='td_width1'>관리자</td>
+                            <td>답변내용ㅇㅇㅇㅇㅇㅇㅇ</td>
+                            <td class='td_width2'>2023-06-20</td>
+                        </tr>    
+                    </tbody>
+                </table>
+            </div>
+
+			<ul class="view_btn">
+				<li><a href="qna.html">리스트</a></li>
+                <!-- 수정 삭제는 작성자일 때만 노출 -->
+                <li><a href="" class="modal_open1">수정</a></li>
+                <li><a href="" class="modal_open2">삭제</a></li>
+			</ul>
+		</div>
+    </div>
+
+    <div class="modal modal1">
+		<div class="modal_box">
+			<div class="modalWrap">
+                <form method="" name="" action="">
+                    <div class="flex">
+                        <h1>수정하기</h1>
+                        <p>회원님의 <br>비밀번호를 입력해주세요</p>
+                    </div>
+                    <div class="in_area">
+                        <input type="password" placeholder="비밀번호를 입력하세요" name="pass" required>
+                        <input type="submit" class="sb">
+                    </div>
+                </form>
+            </div>
+			<a href="" class="close_btn"><img src="resource/img/cross.png"></a>
+		</div>
+	</div>
+
+    <div class="modal modal2">
+		<div class="modal_box">
+			<div class="modalWrap">
+                <form method="" name="" action="">
+                    <div class="flex">
+                        <h1>삭제하기</h1>
+                        <p>회원님의 <br>비밀번호를 입력해주세요</p>
+                    </div>
+                    <div class="in_area">
+                        <input type="password" placeholder="비밀번호를 입력하세요" name="pass" required>
+                        <input type="submit" class="sb">
+                    </div>
+                </form>
+            </div>
+			<a href="" class="close_btn"><img src="resource/img/cross.png"></a>
+		</div>
+	</div>
+    <script>
+        $(".modal_open1").click(function() {
+	        $(".modal1").fadeIn();
+	        return false;
+	    });
+		
+		$(".modal_open2").click(function() {
+	        $(".modal2").fadeIn();
+	        return false;
+	    });
+		
+		$(".close_btn").click(function() {
+	        $(this).parents(".modal").fadeOut();
+	        return false;
+	    });
+    </script>
+
+    <footer>
+        <div class="center12">
+            <p class="ft_txt">
+                <span><strong class="name">BUCKET LIST</strong></span>
+                <span><strong>대표이사</strong> 홍길동</span>
+                <span><strong>주소</strong> 주소적어어어어어어어어어어어어어어엉</span>
+            </p>
+            <p class="ft_txt">
+                <span><strong>전화번호</strong> 02-111-1111</span>
+                <span><strong>팩스번호</strong> 02-111-2222</span>
+                <span><strong>사업자등록번호</strong> 111-22-33333</span>
+                <span><strong>이메일</strong> bucketlist@bk.co.kr</span>
+                <span><strong>개인정보보호책임자</strong> 홍길동</span>
+            </p>
+            <p class="copy">Copyright © BUCKET LIST All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <a href="" class="topBtn"><img src="resource/img/arr_top.png" alt=""></a>
+    <script>
+        $(window).scroll(function(){
+            if ($(this).scrollTop() > 300){
+                $('.topBtn').fadeIn();
+            } else{
+                $('.topBtn').fadeOut();
+            }
+        });
+        $('.topBtn').click(function(){
+            $('html, body').animate({scrollTop:0},400);
+            return false;
+        });
+
+        $('.menuBtn').click(function(){
+            if($(this).hasClass('menuBtnAc')) {
+                $(this).removeClass('menuBtnAc');
+                $('.menuWrap').fadeOut();
+                return false;
+            } else {
+                $(this).addClass('menuBtnAc');
+                $('.menuWrap').fadeIn();
+                return false;
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUCKET LIST</title>
+    <link rel="stylesheet" href="resource/css/common.css">
+    <link rel="stylesheet" href="resource/css/member.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+    <div class="login_area cf">
+        <div class="bg_box"></div>
+        <div class="left_box2">
+            <div class="cont2">
+                <a href="index.html"><img src="resource/img/logo.png" alt="" class="logo2"></a>
+                
+                <p class="top_txt">회원가입</p>
+                
+                <p class="login">
+                    이미 계정이 있으신가요? 
+                    <a href="login.html">로그인</a>
+                </p>
+    
+                <form method="post" name="regFrm" action="joinProc.jsp">
+                    <p class="in_wrap">
+                        <label for="phone"><span class="star">* </span>연락처</label>
+                        <span class="msgWrap">
+                            <input type="text" placeholder="실명인증을 해주세요" class="in_box in_call" id="phone" name="phone">
+                            <input type="button" value="실명인증" class="mBtn" onclick="">
+                        </span>
+                        <span id="phonechk" class="ment"></span>
+                    </p>
+                    <p class="in_wrap">
+                        <label for="email"><span class="star">* </span>이메일</label>
+                        <span class="mail_wrap">
+                            <input type="text" placeholder="이메일을 입력해 주세요" class="in_box in_mail" id="email" name="email">
+                        </span>
+                        <i id="mailchk" class="ment" style="font-style: normal"></i>
+                    </p>
+                    <p class="in_wrap">
+                        <label for="pwd"><span class="star">* </span>비밀번호</label>
+                        <span class="pwWrap">
+	                        <input type="password" placeholder="비밀번호를 입력해 주세요" class="in_box pwbox" id="pwd" name="pwd">
+	                        <i class="viewCk viewCk2">
+								<i class="fa-solid fa-eye pwview"></i>
+								<i class="fa-solid fa-eye-slash pwhide"></i>
+							</i>
+                    	</span>
+                        <span id="pwdchk" class="ment"></span>
+                    </p>
+                    <p class="in_wrap">
+                        <label for="rePwd"><span class="star">* </span>비밀번호확인</label>
+                        <span class="pwWrap">
+	                        <input type="password" placeholder="비밀번호를 한 번 더 입력해 주세요" class="in_box pwbox" id="rePwd" name="rePwd">
+	                        <i class="viewCk viewCk2">
+								<i class="fa-solid fa-eye pwview"></i>
+								<i class="fa-solid fa-eye-slash pwhide"></i>
+							</i>
+                    	</span>
+                        <span id="pwdchk2" class="ment"></span>
+                    </p>
+                    <p class="in_wrap">
+                        <label for="name"><span class="star">* </span>이름</label>
+                        <input type="text" placeholder="이름을 입력해 주세요" class="in_box" id="name" name="name">
+                        <span id="namechk" class="ment"></span>
+                    </p>
+                    <p class="in_wrap">
+                        <label for="name"><span class="star">* </span>생년월일</label>
+                        <input type="text" placeholder="생년월일을 입력해 주세요(ex. 991231)" class="in_box" id="birth" name="birth">
+                        <span id="namechk" class="ment"></span>
+                    </p>
+                    <p class="in_wrap">
+                        <label for="zipcode">주소</label>
+                        <span class="zipWrap">
+                            <input type="text" class="in_box in_zip" readonly placeholder="우편번호" id="zipcode" name="zipcode">
+                            <input type="button" value="우편번호 찾기" class="zBtn" onclick="findAddr();">
+                        </span>
+                        <input type="text" class="in_box in_box2" readonly placeholder="주소" id="address" name="address">
+                        <input type="text" placeholder="상세주소를 입력해 주세요" class="in_box" id="detailAdr" name="detailAdr">
+                    </p>
+
+                    <p class="in_wrap">
+                        <label>약관동의</label>
+                    </p>
+
+                    <input type="button" value="회원가입" onclick="inputCheck();" class="su_btn">
+                </form>
+            </div>
+        </div>
+    </div>
+
+  
+    
+</body>
+</html>

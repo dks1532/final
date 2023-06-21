@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BUCKET LIST</title>
+    <link rel="stylesheet" href="resource/css/common.css">
+    <link rel="stylesheet" href="resource/css/member.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+</head>
+<body>
+    <div class="login_area cf">
+        <div class="bg_box"></div>
+        <div class="left_box">
+            <div class="cont">
+                <a href="index.html"><img src="resource/img/logo.png" alt="" class="logo2"></a>
+                <p class="top_txt">여행은 살아보는 거야 <span>버킷리스트</span></p>
+    
+                <form name="loginFrm" method="post" action="loginProc.jsp">
+                    <input type="text" class="in_box in_id" placeholder="아이디" id="id" name="id">
+                    <div class="pwWrap">
+	                    <input type="password" class="in_box in_pw" placeholder="비밀번호" id="pwd" name="pwd" class="pwbox">
+	                    <span class="viewCk">
+							<i class="fa-solid fa-eye pwview"></i>
+							<i class="fa-solid fa-eye-slash pwhide"></i>
+						</span>
+                    </div>
+               
+                    <ul class="findList">
+                        <li><a href="" class="pw_open">비밀번호재설정</a></li>
+                        <li><a href="" class="id_open">아이디찾기</a></li>
+                    </ul>
+               
+                    <input type="submit" value="로그인" class="in_sub">
+                    
+                    <ul class="snsLogin">
+                        <li class="naver"><a href=""><img src="resource/img/naver.png">네이버로 로그인</a></li>
+                        <li class="kakao"><a href=""><img src="resource/img/kakao.png">카카오로 로그인</a></li>
+                    </ul>
+                </form>
+    
+                
+                <p class="join">
+                    회원이 아니신가요? 
+                    <a href="join.html">지금 가입하세요</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal id_modal">
+		<div class="modal_box">
+			<div class="find">
+                <form name="" method="">
+                    <div class="flex">
+                        <h1>아이디 찾기</h1>
+                        <p>회원 가입시 입력한 <br>이름과 생년월일을 입력해주세요</p>
+                    </div>
+                    <div class="in_area">
+                        <input type="text" placeholder="이름을 입력해주세요" required name="name" id="name">
+                        <input type="text" placeholder="생년월일 입력해주세요" required name="birth" id="birth">
+                        <div class="flex2">
+                            <input type="reset" class="sb">
+                            <input type="button" value="확인" class="sb" onclick="">
+                        </div>
+                    </div>
+                </form>
+            </div>
+			<a href="" class="close_btn"><img src="resource/img/cross.png"></a>
+		</div>
+	</div>
+
+    <div class="modal pw_modal">
+		<div class="modal_box">
+			<div class="find">
+                <form name="" method="">
+                    <div class="flex">
+                        <h1>비밀번호 재설정</h1>
+                        <p>회원 가입시 입력한 <br>이름과 아이디를 입력해주세요</p>
+                    </div>
+                    <div class="in_area">
+                        <input type="text" placeholder="이름을 입력해주세요" required id="p_name" name="p_name">
+                        <input type="text" placeholder="아이디를 입력해주세요" required id="p_id" name="p_id">
+                        <div class="flex2">
+                            <input type="reset" class="sb">
+                            <input type="button" value="확인" class="sb" onclick="">
+                        </div>
+                    </div>
+                </form>
+            </div>
+			<a href="" class="close_btn"><img src="resource/img/cross.png"></a>
+		</div>
+	</div>
+
+    <script type="text/javascript">
+        $(function() {
+            $(".id_open").click(function() {
+                $(".id_modal").fadeIn();
+                return false;
+            });
+            
+            $(".close_btn").click(function() {
+                $(this).parents(".modal").fadeOut();
+                return false;
+            });
+    
+            $(".pw_open").click(function() {
+                $(".pw_modal").fadeIn();
+                return false;
+            });
+        });
+        
+        $(function() {
+            $(".pwview").click(function() {
+                $(this).parent().prev().attr("type", "text");
+                $(this).css("display", "none");
+                $(this).next(".pwhide").css("display", "block");
+            });
+            
+            $(".pwhide").click(function() {
+                $(this).parent().prev().attr("type", "password");
+                $(this).css("display", "none");
+                $(this).prev(".pwview").css("display", "block");
+            });
+        });
+    </script>
+
+    
+</body>
+</html>

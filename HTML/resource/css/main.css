@@ -43,18 +43,18 @@
 .mainVisual .reservation input::-moz-placeholder {color: #333;}
 
 .mainVisual .reservation .area {
-    width: 180px;
+    width: 200px;
     border-right: 1px solid #ddd;
-    margin-right: 30px;
+    margin-right: 40px;
 }
 
 .mainVisual .reservation .date {
-    width: 320px;
+    width: 340px;
     border-right: 1px solid #ddd;
 }
 
 .mainVisual .reservation .num {
-    width: 150px;
+    width: 160px;
     text-align: center;
 }
 
@@ -130,7 +130,29 @@
 .themeWrap .themeTab {
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
+    margin: 50px 0 20px;
+}
+
+.themeWrap .themeTab li {
+    margin: 0 15px;
+    font-size: 16px;
+}
+
+.themeWrap .themeTab li a {
+    padding-bottom: 5px;
+    color: #777;
+    display: block;
+    transition: 0.3s;
+}
+
+.themeWrap .themeTab li a:hover {
+    color: #111;
+}
+
+.themeWrap .themeTab li a.active {
+    border-bottom: 2px solid #c6a582;
+    color: #c6a582;
+    font-weight: 500;
 }
 
 .bestReviewWrap {
@@ -140,4 +162,47 @@
 
 .bestReviewWrap .accList {
     margin-top: 30px;
+}
+
+.faqWrap {
+    padding: 100px 0;
+}
+
+.faqWrap .faqList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.faqWrap .faqList .half {
+    width: 48%;
+    border-top: 1px solid #111;
+}
+
+.faqWrap .faqList li {
+    border-bottom: 1px solid #ccc;
+}
+
+.faqWrap .faqList li a p.que {
+    padding: 20px 10px;
+    font-size: 15px;
+}
+
+.faqWrap .faqList li a p.que strong {
+    font-weight: 500;
+    margin-right: 10px;
+}
+
+.faqWrap .faqList li a p.que img {
+    width: 15px;
+    margin-top: 8px;
+    float: right;
+}
+
+.faqWrap .faqList li a .ans {
+    display: none;
+    padding: 10px 20px 30px;
+    font-size: 14px;
+    line-height: 1.4;
 }

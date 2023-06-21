@@ -14,35 +14,45 @@
 <body>
     <header>
         <div class="hd center12">
-            <a href="" class="menuBtn">
-                <span></span>
-                <span class="center"></span>
-                <span></span>
-            </a>
-            <h1><a href=""><img src="resource/img/logo.png" alt=""></a></h1>
+            <h1><a href="index.html"><img src="resource/img/logo.png" alt=""></a></h1>
             <ul class="rightMenu">
-                <li><a href="">LOGIN</a></li>
-                <li><a href="">JOIN</a></li>
+                <li><a href="login.html">LOGIN</a></li>
+                <li><a href="join.html">JOIN</a></li>
 
                 <!-- 로그인했을 때 로그인, 회원가입 사라지고 노출되는 버튼 -->
                 <!-- <li><a href="">LOGOUT</a></li> -->
                 <!-- <li><a href="">MYPAGE</a></li> -->
 
                 <!-- 로그인 안한 상태에서 누르면 로그인 안내멘트 뜨고 로그인 페이지로 이동 -->
-                <li><a href="">MY BOOKING</a></li>
+                <li><a href="myBooking.html">MY BOOKING</a></li>
 
                 <!-- 호스트 아이디로 로그인했을 때 노출되는 버튼 -->
-                <!-- <li><a href="" class="plusBtn">HOST PAGE</a></li> -->
+                <!-- <li><a href="host.html" class="plusBtn">HOST PAGE</a></li> -->
     
                 <!-- 관리자 아이디로 로그인했을 때 노출되는 버튼 -->
-                <!-- <li><a href="" class="plusBtn">ADMIN PAGE</a></li> -->
+                <!-- <li><a href="admin.html" class="plusBtn">ADMIN PAGE</a></li> -->
 
-                <li><a href="" class="reserBtn">RESERVATION</a></li>
+                <li><a href="reservation.html" class="reserBtn">RESERVATION</a></li>
             </ul>
 
         </div>
     </header>
     <div class="fkHeader"></div>
+    <a href="" class="menuBtn">
+        <span class="up"></span>
+        <span class="center"></span>
+        <span class="down"></span>
+    </a>
+    <div class="menuWrap">
+        <ul>
+            <li><a href="notice.html">NOTICE</a></li>
+            <li><a href="qna.html">QNA</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="like.html">LIKE</a></li>
+            <li><a href="msg.html">MESSAGE</a></li>
+            <li><a href="hostEn.html">HOST</a></li>
+        </ul>
+    </div>
 
     <div class="mainVisual cf">
         <div class="imgBn swiper-container">
@@ -126,17 +136,22 @@
     </div>
 
     <div class="themeWrap center12">
+        <h3 class="mainTit serif">Accommodation by Theme</h3>
+        <p class="mainTxt">테마별 숙소 어쩌고 저쩌고</p>
+
         <ul class="themeTab">
-            <li><a href="">커플여행</a></li>
+            <li><a href="" class="active">커플여행</a></li>
             <li><a href="">가족여행</a></li>
             <li><a href="">MT</a></li>
+            <li><a href="">테마이름</a></li>
+            <li><a href="">테마이름</a></li>
         </ul>
 
         <ul class="accList">
             <li class="listLi" onclick="location.href=''">
                 <div class="imgArea" style="background-image: url(resource/img/room01.jpg);">
                     <img src="resource/img/ratio43.png" alt="" class="ratio">
-                    <a href="" class="heartBtn"><img src="resource/img/like_ac.png" alt=""></a>
+                    <a href="" class="heartBtn heartAc"><img src="resource/img/like_ac.png" alt=""></a>
                 </div>
                 <p class="local">서울</p>
                 <p class="name ellipsis">서울라이트 펜트하우스 서울라이트 펜트하우스 서울라이트 펜트하우스 서울라이트 펜트하우스 서울라이트 펜트하우스</p>
@@ -256,9 +271,9 @@
 
         <ul class="accList center12">
             <li class="listLi" onclick="location.href=''">
-                <div class="imgArea" style="background-image: url(resource/img/room04.jpg);">
+                <div class="imgArea" style="background-image: url(resource/img/room07.jpg);">
                     <img src="resource/img/ratio43.png" alt="" class="ratio">
-                    <a href="" class="heartBtn"><img src="resource/img/like_ac.png" alt=""></a>
+                    <a href="" class="heartBtn heartAc"><img src="resource/img/like_ac.png" alt=""></a>
                 </div>
                 <p class="local">서울</p>
                 <p class="name ellipsis">서울라이트 펜트하우스 서울라이트 펜트하우스 서울라이트 펜트하우스 서울라이트 펜트하우스 서울라이트 펜트하우스</p>
@@ -275,7 +290,7 @@
                 <p class="price">1박 <strong>120,000</strong>원~</p>
             </li>
             <li class="listLi" onclick="location.href=''">
-                <div class="imgArea" style="background-image: url(resource/img/room05.jpg);">
+                <div class="imgArea" style="background-image: url(resource/img/room08.jpg);">
                     <img src="resource/img/ratio43.png" alt="" class="ratio">
                     <a href="" class="heartBtn"><img src="resource/img/like.png" alt=""></a>
                 </div>
@@ -294,7 +309,7 @@
                 <p class="price">1박 <strong>99,990</strong>원~</p>
             </li>
             <li class="listLi" onclick="location.href=''">
-                <div class="imgArea" style="background-image: url(resource/img/room06.jpg);">
+                <div class="imgArea" style="background-image: url(resource/img/room09.jpg);">
                     <img src="resource/img/ratio43.png" alt="" class="ratio">
                     <a href="" class="heartBtn"><img src="resource/img/like.png" alt=""></a>
                 </div>
@@ -314,6 +329,141 @@
             </li>
         </ul>
     </div>
+    <script>
+        $('.heartBtn').click(function(){
+            if($(this).hasClass('heartAc')) {
+                $(this).removeClass('heartAc');
+                $(this).children().attr("src", "resource/img/like.png");
+                return false;
+            } else {
+                $(this).addClass('heartAc');
+                $(this).children().attr("src", "resource/img/like_ac.png");
+                return false;
+            }
+        });
+    </script>
+
+    <div class="faqWrap">
+        <h3 class="mainTit serif">Frequently Asked Questions</h3>
+        <p class="mainTxt">자주 묻는 질문 어쩌고 저쩌고</p>
+
+        <ul class="faqList center12">
+            <div class="half">
+                <li>
+                    <a href="">
+                        <p class="que cf">
+                            <strong>1.</strong>
+                            <span>자주 묻는 질문 제목 어쩌고 저쩌고</span>
+                            <img src="resource/img/select.png" alt="">
+                        </p>
+                        <div class="ans">
+                            자주 묻는 질문 답변입니다 어쩌고 저쩌고 그렇고 저렇고 저쩌고 네네네네네네네네네ㅔ네네네네네네그렇습니다나나다다아아다아아핟아ㅏㅇ아
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <p class="que cf">
+                            <strong>2.</strong>
+                            <span>자주 묻는 질문 제목 어쩌고 저쩌고</span>
+                            <img src="resource/img/select.png" alt="">
+                        </p>
+                        <div class="ans">
+                            자주 묻는 질문 답변입니다 어쩌고 저쩌고 그렇고 저렇고 저쩌고 네네네네네네네네네ㅔ네네네네네네그렇습니다나나다다아아다아아핟아ㅏㅇ아
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <p class="que cf">
+                            <strong>3.</strong>
+                            <span>자주 묻는 질문 제목 어쩌고 저쩌고</span>
+                            <img src="resource/img/select.png" alt="">
+                        </p>
+                        <div class="ans">
+                            자주 묻는 질문 답변입니다 어쩌고 저쩌고 그렇고 저렇고 저쩌고 네네네네네네네네네ㅔ네네네네네네그렇습니다나나다다아아다아아핟아ㅏㅇ아
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <p class="que cf">
+                            <strong>4.</strong>
+                            <span>자주 묻는 질문 제목 어쩌고 저쩌고</span>
+                            <img src="resource/img/select.png" alt="">
+                        </p>
+                        <div class="ans">
+                            자주 묻는 질문 답변입니다 어쩌고 저쩌고 그렇고 저렇고 저쩌고 네네네네네네네네네ㅔ네네네네네네그렇습니다나나다다아아다아아핟아ㅏㅇ아
+                        </div>
+                    </a>
+                </li>
+            </div>
+
+            <div class="half">
+                <li>
+                    <a href="">
+                        <p class="que cf">
+                            <strong>5.</strong>
+                            <span>자주 묻는 질문 제목 어쩌고 저쩌고</span>
+                            <img src="resource/img/select.png" alt="">
+                        </p>
+                        <div class="ans">
+                            자주 묻는 질문 답변입니다 어쩌고 저쩌고 그렇고 저렇고 저쩌고 네네네네네네네네네ㅔ네네네네네네그렇습니다나나다다아아다아아핟아ㅏㅇ아
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <p class="que cf">
+                            <strong>6.</strong>
+                            <span>자주 묻는 질문 제목 어쩌고 저쩌고</span>
+                            <img src="resource/img/select.png" alt="">
+                        </p>
+                        <div class="ans">
+                            자주 묻는 질문 답변입니다 어쩌고 저쩌고 그렇고 저렇고 저쩌고 네네네네네네네네네ㅔ네네네네네네그렇습니다나나다다아아다아아핟아ㅏㅇ아
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <p class="que cf">
+                            <strong>7.</strong>
+                            <span>자주 묻는 질문 제목 어쩌고 저쩌고</span>
+                            <img src="resource/img/select.png" alt="">
+                        </p>
+                        <div class="ans">
+                            자주 묻는 질문 답변입니다 어쩌고 저쩌고 그렇고 저렇고 저쩌고 네네네네네네네네네ㅔ네네네네네네그렇습니다나나다다아아다아아핟아ㅏㅇ아
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <p class="que cf">
+                            <strong>8.</strong>
+                            <span>자주 묻는 질문 제목 어쩌고 저쩌고</span>
+                            <img src="resource/img/select.png" alt="">
+                        </p>
+                        <div class="ans">
+                            자주 묻는 질문 답변입니다 어쩌고 저쩌고 그렇고 저렇고 저쩌고 네네네네네네네네네ㅔ네네네네네네그렇습니다나나다다아아다아아핟아ㅏㅇ아
+                        </div>
+                    </a>
+                </li>
+            </div>
+        </ul>
+    </div>
+    <script>
+        $('.menuBtn').click(function(){
+            if($(this).hasClass('menuBtnAc')) {
+                $(this).removeClass('menuBtnAc');
+                $('.menuWrap').fadeOut();
+                return false;
+            } else {
+                $(this).addClass('menuBtnAc');
+                $('.menuWrap').fadeIn();
+                return false;
+            }
+        });
+    </script>
 
     <footer>
         <div class="center12">
@@ -346,6 +496,18 @@
             $('html, body').animate({scrollTop:0},400);
             return false;
         });
-        </script>
+
+        $('.faqList li a').click(function(){
+            if($(this).hasClass('faqAc')) {
+                $(this).removeClass('faqAc');
+                $(this).children('.ans').slideUp();
+                return false;
+            } else {
+                $(this).addClass('faqAc');
+                $(this).children('.ans').slideDown();
+                return false;
+            }
+        });
+    </script>
 </body>
 </html>

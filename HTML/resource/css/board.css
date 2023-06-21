@@ -1,0 +1,556 @@
+@charset "UTF-8";
+
+/* list */
+.board_list {
+    padding: 100px 0 120px;
+}
+
+.subTit {
+	font-size: 30px;
+	margin-bottom: 40px;
+    font-weight: 200;
+    line-height: 1.2;
+}
+
+.subTit strong {
+    font-weight: 500;
+}
+
+.board_list .list_top {
+	margin-bottom: 40px;
+}
+
+.search_form {
+	float: right;
+    position: relative;
+}
+
+.search_form select {
+    font-size: 16px;
+	width: 120px;
+	height: 40px;
+	padding: 0 10px;
+	border-bottom: 1px solid #ccc; 
+	-webkit-appearance: none !important; 
+	-moz-appearance: none !important; 
+	appearance: none !important; 
+	background: #fff url(../img/select.png) no-repeat right 10px center;
+	background-size: 13px;
+    margin-right: 10px;
+}
+
+.search_form select::-ms-expand {
+    display: none;
+}
+
+.search_form input[type="text"] {
+    font-size: 16px;
+	width: 300px;
+	height: 40px;
+	padding-left: 10px;
+	padding-right: 50px;
+	border-bottom: 1px solid #ccc; 
+}
+
+.search_form input[type="text"]:focus {
+	border-color: #333; 
+}
+
+.search_form input[type="submit"] {
+	width: 40px;
+	height: 40px;
+	position: absolute;
+	top: 0;
+	right: 0;
+	font-size: 0;
+	background: url(../img/search.png) center center no-repeat;
+	background-size: 20px 20px;
+}
+
+.board_list table {
+	border-top: 1px solid #333;
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+.board_list tr {
+	border-bottom: 1px solid #ccc;
+}
+
+.board_list th {
+	padding: 15px 0;
+	font-weight: 600;
+}
+
+.board_list td {
+	padding: 15px 0;
+}
+
+.board_list td:nth-child(1) {
+	text-align: center;
+	width: 80px;
+}
+
+.board_list td:nth-child(3) {
+	text-align: center;
+	width: 110px;
+	color: #777;
+}
+
+.board_list td:nth-child(4) {
+	text-align: center;
+	width: 140px;
+	color: #777;
+}
+
+.board_list td:nth-child(5) {
+	text-align: center;
+	width: 90px;
+	color: #777;
+}
+
+.board_list .link_tr {
+	cursor: pointer;
+}
+
+.board_list .link_tr:hover td:nth-child(2) {
+	text-decoration: underline;
+}
+
+.page_ul {
+	display: flex;
+	justify-content: center;
+	align-items: baseline;
+	min-height: 43px;
+}
+
+.page_ul li {
+	margin: 0 10px;
+}
+
+.page_ul li.prev {
+	margin-right: 20px;
+}
+
+.page_ul li.next {
+	margin-left: 20px;
+}
+
+.page_ul li a {
+	color: #999;
+	transition: color 0.3s;
+	font-family: 'campton';
+	font-size: 24px;
+	font-weight: 200;
+}
+
+.page_ul li a.active {
+	color: #222;
+	font-weight: 600;
+}
+
+.page_ul li a:hover {
+	color: #c6a582;
+}
+
+.list_btn {
+	display: flex;
+	justify-content: space-between;
+}
+
+.list_btn li {
+	position: relative;
+	top: -50px;
+}
+
+.list_btn li a {
+	display: block;
+	width: 120px;
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	background: #c6a582;
+	color: #ffffff;
+	border: none;
+	font-size: 13px;
+	transition: background 0.4s;
+}
+
+.list_btn li a.st_btn {
+	background: #444;
+}
+
+.list_btn li a:hover {
+	background: #111;
+}
+
+
+/* view */
+.boardList {
+    padding: 100px 0 120px;
+}
+
+.board_view table {
+	color: #333;
+	border-top: 1px solid #333;
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+.board_view tr.tr_bd {
+	border-bottom: 1px solid #eee;
+}
+
+.board_view th {
+	padding: 30px 30px 15px 30px;
+	font-size: 22px;
+	font-weight: 600;
+	text-align: left;
+	color: #111;
+}
+
+.board_view > table td {
+	padding: 5px 30px;
+	font-size: 15px;
+	font-weight: 300;
+}
+
+.board_view td.td_mg {
+	padding-bottom: 30px;
+}
+
+.board_view td.td_mg2 {
+	padding: 40px 30px;
+}
+
+.board_view td .flex {
+	display: flex;
+}
+
+.board_view td .pTop:first-child {
+	margin-right: 20px;	
+	position: relative;
+	padding-right: 20px;
+}
+
+.board_view td.firstTd .pTop:first-child:after {
+	position: absolute;
+	top: 7px;
+	right: 0;
+	content: '';
+	width: 1px;
+	height: 13px;
+	background: #ddd;
+}
+
+.board_view td .pTop span {
+	color: #777;
+	margin-left: 10px;
+}
+
+.board_view td .pTop span a {
+	text-decoration: underline;
+}
+
+.board_view td .view_txt {
+	font-family: inherit;
+    font-size: 16px;
+}
+
+.board_view td .view_img {
+	margin-top: 20px;
+}
+
+.board_view td .view_img img {
+	max-width: 90%;
+}
+
+.board_view td .view_info {
+	margin-top: 30px;
+	text-align: right;
+	font-size: 13px;
+}
+
+.board_view td .view_info span {
+	font-weight: 500;
+}
+
+.board_view .view_btn {
+	display: flex;
+	justify-content: center;
+}
+
+.board_view .view_btn li {
+	margin: 0 10px;
+}
+
+.board_view .view_btn li a {
+	display: block;
+	width: 140px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	background: #777;
+	font-size: 14px;
+	transition: 0.3s;
+    color: #fff;
+}
+
+.board_view .view_btn li a:hover {
+	background: #c6a582;
+}
+
+.modal {
+	position: fixed;
+	background: rgba(0, 0, 0, 0.7);
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	display: none;
+	z-index: 100;
+}
+
+.modal_box {
+	background: #ffffff;
+	position: absolute;
+	width: 500px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	border-radius: 20px;
+	padding: 60px 50px;
+}
+
+.modal_box .close_btn {
+	position: absolute;
+	width: 30px;
+	top: 20px;
+	right: 20px;
+}
+
+.modal_box .close_btn img {
+	width: 100%;
+	transition: 0.4s;
+}
+
+.modal_box .close_btn:hover img {
+	transform: rotate(90deg);
+}
+
+.modalWrap .flex {
+	display: flex;
+	margin-bottom: 50px;
+}
+
+.modalWrap h1 {
+	font-size: 24px;
+	font-weight: 700;
+}
+
+.modalWrap p {
+	font-size: 13px;
+	line-height: 1.4;
+	margin-top: 8px;
+	margin-left: 50px;
+}
+
+.modalWrap .in_area {
+	position: relative;
+}
+
+.modalWrap input[type=password] {
+	border-bottom: 1px solid #ddd;
+	width: 100%;
+	padding-right: 40px;
+	font-size: 16px;
+	height: 60px;
+	font-weight: 200;
+}
+
+.modalWrap input[type=password]:focus {
+	border-bottom: 1px solid #111;
+}
+
+.modalWrap .in_area .sb {
+	position: absolute;
+	right: 0;
+	bottom: 10px;
+	font-size: 0;
+	width: 40px;
+	height: 40px;
+	border-radius: 10px;
+	background: #c6a582 url(../img/go.png) no-repeat center center;
+	background-size: 22px;
+	transition: background 0.25s;
+}
+
+.modalWrap .in_area .sb:hover {
+	background: #444 url(../img/go.png) no-repeat 65% center;
+	background-size: 22px;
+}
+
+.modalWrap ul {
+	display: flex;
+	justify-content: center;
+}
+
+.modalWrap ul li {
+	margin: 0 10px;
+}
+
+.modalWrap ul li input {
+	width: 120px;
+	height: 40px;
+	border: 1px solid #666;
+	background: #fff;
+	border-radius: 20px;
+	font-size: 13px;
+	font-weight: 500;
+}
+
+.modalWrap ul li input:hover {
+	background: #666;
+	color: #ffffff;
+}
+
+
+/* post */
+.write_form table {
+	font-size: 15px;
+	border-top: 1px solid #333;
+	width: 100%;
+	margin-bottom: 60px;
+}
+
+.write_form tr {
+	border-bottom: 1px solid #ccc;
+}
+
+.write_form th {
+	padding: 25px 0 25px 20px;
+	width: 180px;
+	text-align: left;
+}
+
+.write_form th label {
+	font-weight: 500;
+}
+
+.write_form td {
+	padding: 25px 0;
+	position: relative;
+}
+
+.write_form td input.in_box {
+	width: 260px;
+	height: 40px;
+	padding: 0 10px;
+}
+
+.write_form td input.in_box2 {
+	width: 1000px;
+}
+
+.write_form td textarea {
+	width: 1000px;
+	height: 400px;
+	background: #f9f9f9;
+	padding: 20px;
+	resize: none;
+}
+
+.write_form td input[type="file"]:focus {
+	border: 0;
+}
+
+.write_form .write_btn {
+	display: flex;
+	justify-content: center;
+}
+
+.write_form .write_btn li {
+	margin: 0 10px;
+}
+
+.write_form .write_btn li input {
+	width: 140px;
+	height: 50px;
+	background: #777;
+	color: #ffffff;
+	border: none;
+	font-size: 14px;
+	transition: background 0.4s;
+}
+
+.write_form .write_btn li input:hover {
+	background: #c6a582;
+}
+
+
+/* reply */
+.reply .replyWrite {
+	border: 1px solid #eee;
+	background: #fff;
+	margin-bottom: 30px;
+	position: relative;
+	padding-bottom: 35px;
+}
+
+.reply .replyWrite p {
+	font-size: 14px;
+	font-weight: 500;
+	padding: 20px 0 0 20px;
+}
+
+.reply .replyWrite textarea {
+	resize: none;
+	height: 60px;
+	border-bottom: 1px solid #eee;
+	display: block;
+	width: 100%;
+	padding: 20px;
+	font-size: 14px;
+}
+
+.reply .replyWrite button {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	width: 80px;
+	height: 35px;
+	background: #c6a582;
+	color: #fff;
+}
+
+.reply .replyWrite button.no {
+	background: #ccc;
+}
+
+.reply tr {
+	border-bottom: 1px solid #eee;
+}
+
+.reply td {
+    padding: 20px 15px;
+	font-size: 14px;
+}
+
+.reply table .td_width1 {
+	width: 100px;
+	text-align: center;
+}
+
+.reply table .td_width2 {
+	width: 130px;
+	text-align: center;
+}
+
+.reply table td a {
+	margin-left: 5px;
+	cursor: pointer;
+}
+
+.reply table td a img {
+	width: 8px;
+}
